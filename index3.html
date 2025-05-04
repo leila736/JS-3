@@ -4,6 +4,30 @@
   <title>condition- arrays</title>
 </head>
 <body>
-  <h1>start-stop button</h1>
+  
+<span id="spTime"></span> 
+ 
+
+<script>  
+    var timer;
+
+    timer= setInterval(function() {
+      var date=new Date();
+      
+       document.getElementById('spTime').innerHTML=
+          date.getHours() + ':' +
+          date.getMinutes() + ':' +
+          date.getSeconds();
+
+
+    },1000);
+
+    function stopTimer() {
+        clearTimeout (timer);
+
+    }
+
+</script>
+
 </body>
 </html>
