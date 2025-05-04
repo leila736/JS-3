@@ -6,11 +6,13 @@
 <body>
   
 <span id="spTime"></span> 
-<button>start</button>
+<button onclick="startTimer();">start</button>
 <button onclick="stopTimer();">stop</button> 
 
 <script>  
     var timer;
+    function startTimer(){
+      if (timer) return;
 
     timer= setInterval(function() {
       var date=new Date();
@@ -23,12 +25,12 @@
 
     },1000);
 
-    function startTimer(){
-
+    
     }
 
     function stopTimer() {
-        clearTimeout (timer);
+        clearInterval (timer);
+        timer = null;
 
     }
 
